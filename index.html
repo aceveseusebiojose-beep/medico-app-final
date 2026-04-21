@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Médico</title>
+    <style>
+        body { font-family: sans-serif; background: #f5f5f7; display: flex; justify-content: center; padding: 20px; }
+        .card { background: white; padding: 30px; border-radius: 20px; width: 100%; max-width: 400px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        input, select, button { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: 1px solid #ccc; box-sizing: border-box; }
+        button { background: #0071e3; color: white; border: none; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Registro Especialista</h2>
+        <form action="/registrar" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre Completo" required>
+            <input type="tel" name="numero" placeholder="Número Celular" required>
+            <input type="email" name="correo" placeholder="Correo" required>
+            <select name="rama">
+                <option value="General">General</option>
+                <option value="Radiologia">Radiología</option>
+                <option value="Cardiologia">Cardiología</option>
+            </select>
+            <select name="cliente">
+                <option value="Si">Es Cliente</option>
+                <option value="No">No es Cliente</option>
+            </select>
+            <input type="text" name="mundial" placeholder="¿Quién gana el mundial?">
+            <button type="submit">Enviar a Base de Datos</button>
+        </form>
+    </div>
+</body>
+</html>
